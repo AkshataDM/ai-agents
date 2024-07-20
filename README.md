@@ -10,7 +10,12 @@ source <name>/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Generate and create a free OpenAI API key for CrewAI usage. Set it as an env variable.
+2. Generate and create a free OpenAI API key for CrewAI usage. Set it as an env variable.
 
 `export OPENAI_API_KEY=<your api key>`
+
+3. To run the FastAPI server,
+```
+uvicorn api:api --port 8080 --reload
+```
 
