@@ -1,6 +1,7 @@
 A simple repo to showcase AI agent capabilities. 
 
-1. To run, create a virtual env. 
+1. To run, create a virtual env.
+
 `python -m venv <name>`
 
 `source <name>/bin/activate`
