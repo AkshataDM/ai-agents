@@ -1,0 +1,10 @@
+langchain-exa==0.0.1
+exa_py==1.0.7
+python-dotenv==1.0.1
+langchain
+langchain-core==0.1.19
+langchain-community==0.0.37
+crewai
+duckduckgo-search
+uvicorn
+fastapi
