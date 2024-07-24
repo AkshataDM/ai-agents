@@ -1,4 +1,4 @@
-A simple repo to showcase AI agent capabilities. 
+A simple repo to showcase AI agent capabilities using FastAPI and React
 
 1. To run, create a virtual env and install dependencies
 
@@ -18,4 +18,7 @@ pip install -r requirements.txt
 ```
 uvicorn api:api --port 8080 --reload
 ```
+
+4. To run the frontend:
+`cd frontend` and then `npm start`
 
