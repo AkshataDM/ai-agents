@@ -42,20 +42,25 @@ async def ask(research_model: ResearchModel):
         company = research_model.company
         # Create Agents
         researcher_agent = agents.research_agent()
-        recommender_strategy_agent = agents.recommender_strategy_agent()
+        summary_agent = agents.summarizer_agent()
+        recommender_agent = agents.recommender_agent()
 
         # Create Tasks
         research = tasks.research_task(researcher_agent, company)
-        recommender_strategy = tasks.recommender_strategy_task(recommender_strategy_agent, company)
+        summary = tasks.summarizer_task(summary_agent, company)
+        recommender = tasks.recommender_strategy_task(recommender_agent, company)
+        
 
         crew = Crew(
                 agents=[
                     researcher_agent,
-                    recommender_strategy_agent
+                    summary_agent,
+                    recommender_agent
                 ],
                 tasks=[
                     research,
-                    recommender_strategy
+                    summary, 
+                    recommender
                 
                 ],
                 process=Process.sequential

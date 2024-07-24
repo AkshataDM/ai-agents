@@ -19,11 +19,21 @@ class PreparationAgents():
 			memory=True
 		)
 
-	def recommender_strategy_agent(self):
+	def summarizer_agent(self):
+		return Agent(
+				role='Summarizer Agent',
+				goal='Generate key points about the research.',
+				backstory='Expert in summarizing and generating comprehensive notes.',
+				llm=ollama_model,
+				verbose=True,
+				memory=True,
+				allow_delegation=False
+			)
+	def recommender_agent(self):
 		return Agent(
 				role='Recommender Agent',
-				goal='Generate key points about the research.',
-				backstory='Expert in summarizing and generating comprehensive notes and providing a recommendation to invest in the company or not.',
+				goal='Generate recommendation based on summary.',
+				backstory='Expert in providing a recommendation to invest in the company or not.',
 				llm=ollama_model,
 				verbose=True,
 				memory=True,
